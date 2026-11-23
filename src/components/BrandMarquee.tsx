@@ -1,0 +1,35 @@
+import React from "react";
+import { PARTNER_BRANDS } from "@/data/products";
+
+export default function BrandMarquee() {
+  return (
+    <section className="py-12 bg-slate-50 border-y border-slate-200 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8">
+          <p className="text-xs font-bold uppercase tracking-widest text-sky-600">
+            Partenariats Internationaux
+          </p>
+          <h2 className="text-xl md:text-2xl font-black text-slate-900 mt-1">
+            Distributeur des plus Grandes Marques Scientifiques Mondiales
+          </h2>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          {PARTNER_BRANDS.map((brand, idx) => (
+            <div
+              key={idx}
+              className="px-6 py-4 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col items-center justify-center min-w-[140px] hover:border-sky-400 hover:shadow-md transition-all group"
+            >
+              <span className="font-black text-base tracking-wider text-slate-800 group-hover:text-sky-600 transition-colors">
+                {brand.logo}
+              </span>
+              <span className="text-[10px] text-slate-400 font-medium mt-0.5">
+                Origine {brand.country}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
