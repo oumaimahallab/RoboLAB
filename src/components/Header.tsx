@@ -233,6 +233,10 @@ export default function Header() {
             >
               Contact
             </Link>
+              }`}
+            >
+              Contact
+            </Link>
           </nav>
 
           {/* Quote Button */}

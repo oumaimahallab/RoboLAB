@@ -27,7 +27,7 @@ export default function AProposPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-slate-900 rounded-3xl p-8 md:p-14 text-white relative overflow-hidden">
           <div className="max-w-2xl space-y-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/20 text-sky-400 text-xs font-bold border border-sky-500/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lime-500/10 text-lime-400 text-xs font-bold border border-lime-500/20">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Qui sommes-nous ?</span>
             </span>
@@ -47,9 +47,9 @@ export default function AProposPage() {
           {stats.map((s, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center"
+              className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs text-center"
             >
-              <div className="text-3xl md:text-4xl font-black text-sky-600">{s.value}</div>
+              <div className="text-3xl md:text-4xl font-black text-lime-600">{s.value}</div>
               <p className="text-xs text-slate-500 font-medium mt-1">{s.label}</p>
             </div>
           ))}
@@ -58,9 +58,9 @@ export default function AProposPage() {
 
       {/* Story & Vision */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-xs grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-sky-600">
+            <span className="text-xs font-bold uppercase tracking-widest text-lime-700">
               Notre Mission
             </span>
             <h2 className="text-2xl md:text-3xl font-black text-slate-900">
@@ -75,15 +75,15 @@ export default function AProposPage() {
 
             <div className="pt-2 space-y-2">
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-800">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                <CheckCircle2 className="w-4 h-4 text-lime-600" />
                 <span>Sélection rigoureuse des meilleurs constructeurs allemands et européens</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-800">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                <CheckCircle2 className="w-4 h-4 text-lime-600" />
                 <span>Traçabilité métrologique complète avec certificats d&apos;étalonnage</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-800">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                <CheckCircle2 className="w-4 h-4 text-lime-600" />
                 <span>Service après-vente réactif avec stock permanent de pièces détachées</span>
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function AProposPage() {
       {/* Engagements & Valeurs */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-bold uppercase tracking-widest text-sky-600">
+          <span className="text-xs font-bold uppercase tracking-widest text-lime-700">
             Nos Engagements
           </span>
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mt-1">
@@ -112,8 +112,8 @@ export default function AProposPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-            <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-3">
+            <div className="w-12 h-12 rounded-xl bg-lime-50 text-lime-600 flex items-center justify-center">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <h3 className="text-base font-bold text-slate-900">Qualité Certifiée</h3>
@@ -122,8 +122,8 @@ export default function AProposPage() {
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-            <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-3">
+            <div className="w-12 h-12 rounded-xl bg-lime-50 text-lime-600 flex items-center justify-center">
               <Users className="w-6 h-6" />
             </div>
             <h3 className="text-base font-bold text-slate-900">Conseil d&apos;Ingénieurs</h3>
@@ -132,8 +132,8 @@ export default function AProposPage() {
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-            <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-3">
+            <div className="w-12 h-12 rounded-xl bg-lime-50 text-lime-600 flex items-center justify-center">
               <Globe2 className="w-6 h-6" />
             </div>
             <h3 className="text-base font-bold text-slate-900">Couverture Nationale</h3>

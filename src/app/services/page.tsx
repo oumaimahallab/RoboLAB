@@ -11,7 +11,7 @@ import {
   ArrowRight,
   PhoneCall,
   Clock,
-  Layers
+  Settings
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -19,50 +19,50 @@ export default function ServicesPage() {
   const services = [
     {
       title: "Étalonnage & Métrologie Certifiée",
-      badge: "Accréditation Normes ISO",
-      desc: "Prestations d'étalonnage et de vérification périodique des instruments de pesage et de mesure. Nous délivrons des certificats d'étalonnage officiels traçables aux étalons nationaux et internationaux indispensables pour vos audits qualité (ISO 9001, ISO 17025, BPF, HACCP, ONSSA).",
-      icon: <ShieldCheck className="w-8 h-8 text-sky-600" />,
+      badge: "Traçabilité ISO 17025",
+      desc: "Prestations d'étalonnage et de vérification périodique de vos instruments de pesage et de mesure. Nous délivrons des constats de vérification et certificats d'étalonnage traçables aux étalons internationaux, indispensables pour vos audits qualité (ISO 9001, ISO 17025, BPF, HACCP, ONSSA).",
+      icon: <ShieldCheck className="w-8 h-8 text-lime-600" />,
       features: [
-        "Étalonnage de balances de laboratoire et industrielles (Classes I, II, III)",
-        "Étalonnage en température (thermomètres, enceintes thermiques, étuves, autoclaves)",
-        "Étalonnage en physico-chimie (pH-mètres, conductimètres, réfractomètres)",
-        "Délivrance de certificats avec calcul d'incertitude de mesure"
+        "Étalonnage de balances de laboratoire (précision & semi-micro 0.01mg)",
+        "Étalonnage en température (étuves, bains-marie, thermomètres)",
+        "Étalonnage physico-chimique (pH-mètres, conductimètres, réfractomètres)",
+        "Délivrance de certificats officiels avec calcul d'incertitude"
       ]
     },
     {
-      title: "Laboratoires Clés en Main (Aménagement)",
-      badge: "Ingénierie & Design",
-      desc: "De la conception des plans 2D/3D jusqu'à la mise en service finale : ROBOLAB aménage vos laboratoires en intégrant le mobilier technique (paillasses en grès ou résine, sorbonnes à flux laminaire, armoires de sécurité) et les réseaux d'adduction de fluides et gaz spéciaux.",
-      icon: <Layers className="w-8 h-8 text-sky-600" />,
+      title: "Installation & Mise en Service",
+      badge: "Opérationnel Immédiat",
+      desc: "Nos techniciens spécialisés assurent la livraison sécurisée, le déballage, le raccordement et les réglages initiaux de vos appareils scientifiques sur site partout au Maroc pour garantir des performances optimales dès le premier jour.",
+      icon: <Settings className="w-8 h-8 text-lime-600" />,
       features: [
-        "Étude d'ergonomie et modélisation 3D du laboratoire",
-        "Installation de paillasses modulaires sèches et humides certifiées EN 13150",
-        "Pose de hottes et sorbonnes d'extraction avec réseau de gaines",
-        "Sécurisation des zones de stockage chimiques selon normes anti-incendie"
+        "Installation sur paillasse et mise à niveau de haute précision",
+        "Raccordement et vérification des paramètres d'alimentation",
+        "Tests de fonctionnement et essais à blanc avec réactifs étalons",
+        "Procès-verbal de réception et mise en service officielle"
       ]
     },
     {
       title: "Service Après-Vente (SAV) & Maintenance",
-      badge: "Réactivité 24/48h",
-      desc: "Une équipe d'ingénieurs et techniciens biomédicaux mobiles dans tout le Maroc. Nous assurons la maintenance préventive et curative de vos appareils avec des pièces détachées d'origine certifiées constructeur.",
-      icon: <Wrench className="w-8 h-8 text-sky-600" />,
+      badge: "Intervention 24/48h",
+      desc: "Une équipe technique réactive basée à Casablanca et mobile dans toutes les régions du Maroc. Nous assurons la maintenance préventive et le dépannage rapide avec des pièces détachées d'origine certifiées.",
+      icon: <Wrench className="w-8 h-8 text-lime-600" />,
       features: [
-        "Contrats de maintenance préventive annuelle",
-        "Diagnostic rapide et intervention sur site sous 24 à 48h",
-        "Stock permanent de pièces de rechange d'origine",
-        "Prêt d'appareils de remplacement en cas d'immobilisation prolongée"
+        "Contrats de maintenance préventive semestrielle ou annuelle",
+        "Diagnostic technique et dépannage sur site sous 24 à 48h",
+        "Stock permanent de pièces de rechange et capteurs de rechange",
+        "Appareil de prêt disponible lors des révisions approfondies"
       ]
     },
     {
-      title: "Formation & Qualification Équipements",
+      title: "Formation & Qualification (QI / QO)",
       badge: "Transfert de Compétences",
-      desc: "Nous accompagnons vos équipes techniques et scientifiques pour une prise en main rapide et optimale de vos nouveaux instruments. Qualification d'installation (QI), qualification opérationnelle (QO) et de performance (QP).",
-      icon: <GraduationCap className="w-8 h-8 text-sky-600" />,
+      desc: "Accompagnement de vos techniciens et laborantins pour la maîtrise rapide de leurs nouveaux équipements. Protocoles de qualification d'installation (QI) et qualification opérationnelle (QO) sur demande.",
+      icon: <GraduationCap className="w-8 h-8 text-lime-600" />,
       features: [
-        "Formation théorique et pratique des laborantins et techniciens",
-        "Protocoles de qualification QI/QO/QP conformes pharmacopée",
-        "Supports de cours et fiches mémo de manipulation sécurisée",
-        "Attestations de formation nominatives délivrées à l'issue de la session"
+        "Formation pratique à l'utilisation et au bon entretien du matériel",
+        "Protocoles de qualification QI/QO documentés",
+        "Guides de manipulation et fiches de bonnes pratiques",
+        "Attestations de formation délivrées aux opérateurs"
       ]
     }
   ];
@@ -73,20 +73,20 @@ export default function ServicesPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-slate-900 rounded-3xl p-8 md:p-14 text-white relative overflow-hidden">
           <div className="max-w-2xl space-y-4 relative z-10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/20 text-sky-400 text-xs font-bold border border-sky-500/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lime-500/10 text-lime-400 text-xs font-bold border border-lime-500/20">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Expertise & Services d&apos;Ingénierie ROBOLAB</span>
+              <span>Services Techniques ROBOLAB</span>
             </span>
             <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight">
-              Prestations Techniques, Étalonnage & Projets Clés en Main
+              Étalonnage, Métrologie & Support Technique
             </h1>
             <p className="text-sm md:text-base text-slate-300 leading-relaxed">
-              Plus qu&apos;un simple distributeur de matériel, ROBOLAB est votre partenaire technique global au Maroc : de la conception de vos espaces à la conformité métrologique de vos instruments.
+              Plus qu&apos;un simple distributeur, ROBOLAB vous accompagne dans le maintien de vos instruments aux normes de précision les plus strictes.
             </p>
             <div className="pt-2 flex flex-wrap gap-3">
               <Link
                 href="/devis"
-                className="px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-md transition-colors"
+                className="px-6 py-3 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-xs shadow-md transition-colors"
               >
                 Demander un Devis de Service
               </Link>
@@ -94,9 +94,10 @@ export default function ServicesPage() {
                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Bonjour%20Robolab,%20je%20souhaite%20un%20devis%20pour%20etalonnage%20ou%20maintenance`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-colors"
+                className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs shadow-md transition-colors flex items-center gap-2"
               >
-                Assistance SAV WhatsApp
+                <PhoneCall className="w-4 h-4 text-lime-400" />
+                <span>Assistance SAV WhatsApp</span>
               </a>
             </div>
           </div>
@@ -109,14 +110,14 @@ export default function ServicesPage() {
           {services.map((serv, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between space-y-6"
+              className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-6"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-2xl bg-lime-50 border border-lime-100 flex items-center justify-center">
                     {serv.icon}
                   </div>
-                  <span className="text-[11px] font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-full">
+                  <span className="text-[11px] font-bold text-lime-800 bg-lime-50 border border-lime-200 px-3 py-1 rounded-full">
                     {serv.badge}
                   </span>
                 </div>
@@ -127,7 +128,7 @@ export default function ServicesPage() {
                 <div className="pt-4 border-t border-slate-100 space-y-2.5">
                   {serv.features.map((feat, fIdx) => (
                     <div key={fIdx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-lime-600 shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </div>
                   ))}
@@ -137,9 +138,9 @@ export default function ServicesPage() {
               <div className="pt-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 hover:text-sky-700"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-lime-700 hover:text-lime-800"
                 >
-                  <span>Demander une étude personnalisée</span>
+                  <span>Prendre contact pour ce service</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -148,20 +149,20 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Audit & Intervention Banner */}
+      {/* Intervention Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-sky-600 to-sky-800 rounded-3xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div className="bg-slate-900 rounded-3xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-slate-800">
           <div className="space-y-2 max-w-xl">
             <h3 className="text-xl md:text-2xl font-black">
-              Un audit de votre parc d&apos;instruments de mesure ?
+              Besoin d&apos;un certificat d&apos;étalonnage ou d&apos;une révision ?
             </h3>
-            <p className="text-xs md:text-sm text-sky-100">
-              Nos métrologues interviennent sur tout le territoire marocain pour diagnostiquer l&apos;état de vos balances, sondes et appareils d&apos;analyse.
+            <p className="text-xs text-slate-300">
+              Nos techniciens interviennent sur site à Casablanca, Rabat, Tanger, Fès, Marrakech et Agadir.
             </p>
           </div>
           <Link
             href="/contact"
-            className="px-8 py-3.5 rounded-xl bg-white text-slate-900 font-bold text-xs hover:bg-slate-100 shadow-md transition-all shrink-0"
+            className="px-8 py-3.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-xs shadow-md transition-all shrink-0"
           >
             Planifier une Intervention
           </Link>

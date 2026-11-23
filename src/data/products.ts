@@ -683,6 +683,91 @@ export const PRODUCTS: Product[] = [
     ],
     inStock: true,
     applications: ["Laboratoires d'Enseignement", "Hôpitaux", "Contrôle Qualité", "Chimie Fine"]
+  },
+  {
+    id: "app-05",
+    name: "Analyseur d'Azote & Protéines selon Méthode Kjeldahl Automatique",
+    slug: "analyseur-azote-proteines-methode-kjeldahl",
+    brand: "Velp / Robolab Analytics",
+    category: "appareils",
+    categoryLabel: "Équipements & Appareils",
+    subcategory: "Analyseurs chimiques & Kjeldahl",
+    reference: "RB-KJEL-AUTO",
+    image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80",
+    shortDescription: "Unité de distillation et titration automatique pour dosage précis des protéines et de l'azote ammoniacal.",
+    description: "Conçu pour l'industrie agroalimentaire, la meunerie, les aliments pour bétail et l'environnement. Automatisation totale de l'ajout d'eau, soude, acide borique et distillation à la vapeur avec cellule de titration colorimétrique intégrée.",
+    specifications: [
+      { name: "Norme d'analyse", value: "AOAC, ISO 20483, EPA, DIN" },
+      { name: "Temps de distillation", value: "≤ 4 minutes par échantillon" },
+      { name: "Plage de mesure", value: "0.04 à 220 mg N (azote)" },
+      { name: "Taux de récupération", value: "≥ 99.5 %" },
+      { name: "Écran", value: "Tactile couleur 7 pouces avec 30 méthodes mémorisables" }
+    ],
+    features: [
+      "Générateur de vapeur breveté sans pression nécessitant zéro entretien",
+      "Consommation d'eau de refroidissement optimisée (< 0.5 L/min)",
+      "Traçabilité totale avec export direct vers LIMS et imprimante",
+      "Conformité réglementation ONSSA pour contrôle qualité alimentaire"
+    ],
+    inStock: true,
+    isPopular: true,
+    applications: ["Agroalimentaire", "Minoterie & Céréales", "Nutrition Animale", "Eaux Usées"]
+  },
+  {
+    id: "app-06",
+    name: "Viscosimètre Rotatif Numérique Haute Précision (Type Brookfield)",
+    slug: "viscosimetre-rotatif-numerique-haute-precision",
+    brand: "Robolab RheoTech",
+    category: "mesure",
+    categoryLabel: "Mesure & Analyse",
+    subcategory: "Viscosimètres & Rhéomètres",
+    reference: "RB-VISCO-DIGI",
+    image: "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=800&q=80",
+    shortDescription: "Mesure directe et continue de la viscosité dynamique en cP / mPa.s avec sonde de température intégrée.",
+    description: "Appareil de référence pour le contrôle qualité des peintures, encres, cosmétiques (crèmes, gels), produits alimentaires (huiles, mayonnaises, yaourts) et résines. Livré avec jeu complet de 4 mobiles (spindles) et certificat d'étalonnage traçable.",
+    specifications: [
+      { name: "Plage de mesure", value: "10 à 2 000 000 mPa.s (cP)" },
+      { name: "Précision de mesure", value: "± 1.0 % de la pleine échelle" },
+      { name: "Répétabilité", value: "± 0.2 %" },
+      { name: "Vitesses de rotation", value: "0.3 à 100 tr/min (18 vitesses)" },
+      { name: "Sonde de température", value: "PT100 intégrée de -20°C à 120°C" }
+    ],
+    features: [
+      "Calcul automatique de la viscosité, vitesse de cisaillement et contrainte",
+      "Statif motorisé à crémaillère avec niveau à bulle digital",
+      "Écran LCD rétroéclairé avec interface multilingue",
+      "Fourni avec 4 mobiles en acier inox 316L et étrier de protection"
+    ],
+    inStock: true,
+    isPopular: true,
+    applications: ["Cosmétique", "Peintures & Vernis", "Agroalimentaire", "Pharmacie"]
+  },
+  {
+    id: "mob-03",
+    name: "Paillasse Centrale Modulaire en Grès Cérame Anti-Acide avec Dosseret",
+    slug: "paillasse-centrale-modulaire-gres-cerame",
+    brand: "Robolab LabFurniture",
+    category: "mobilier",
+    categoryLabel: "Mobilier & Sécurité",
+    subcategory: "Paillasses sèches & humides en grès ou résine",
+    reference: "RB-BENCH-GRES",
+    image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80",
+    shortDescription: "Paillasse professionnelle conforme norme européenne EN 13150 avec cuve PP et distribution électrique.",
+    description: "Le summum de la résistance chimique pour laboratoires d'analyse minérale, chimie lourde et enseignement. Dalles de grès cérame étiré massif monolithique inattaquable par les acides concentrés et les solvants, montées sur piétement en C en tube d'acier époxy.",
+    specifications: [
+      { name: "Norme de conformité", value: "EN 13150 / NF X 15-201" },
+      { name: "Plan de travail", value: "Grès cérame étiré massif épaisseur 28 mm avec bordure anti-goutte" },
+      { name: "Capacité de charge", value: "300 kg / m² uniformément répartie" },
+      { name: "Équipements", value: "Cuve polypropylène 400x400 mm, col de cygne eau froide, prises 230V IP55" }
+    ],
+    features: [
+      "Incombustible classe A1 et résistant aux températures jusqu'à 1000°C",
+      "Structure mécano-soudée avec vérins de mise à niveau au sol",
+      "Meubles sous paillasse montés sur roulettes ou suspendus",
+      "Garantie 5 ans anticorrosion et tenue mécanique"
+    ],
+    inStock: true,
+    applications: ["Laboratoires de Chimie", "Mines & Métallurgie", "Agroalimentaire", "Recherche"]
   }
 ];
 
@@ -696,7 +781,13 @@ export const PARTNER_BRANDS = [
   { name: "IKA Werke", logo: "IKA", country: "Allemagne" },
   { name: "Asecos", logo: "ASECOS", country: "Allemagne" },
   { name: "Eppendorf", logo: "EPPENDORF", country: "Allemagne" },
-  { name: "Raypa", logo: "RAYPA", country: "Espagne" }
+  { name: "Raypa", logo: "RAYPA", country: "Espagne" },
+  { name: "Velp", logo: "VELP", country: "Italie" },
+  { name: "Brookfield", logo: "BROOKFIELD", country: "États-Unis" },
+  { name: "Interscience", logo: "INTERSCIENCE", country: "France" },
+  { name: "Buchi", logo: "BÜCHI", country: "Suisse" },
+  { name: "Mettler Toledo", logo: "METTLER TOLEDO", country: "Suisse" },
+  { name: "Horiba", logo: "HORIBA", country: "Japon" }
 ];
 
 export const CLIENT_SECTORS = [

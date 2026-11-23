@@ -41,7 +41,7 @@ export default function ContactPage() {
         {/* Page Header */}
         <div className="bg-slate-900 rounded-3xl p-8 md:p-14 text-white relative overflow-hidden mb-10">
           <div className="max-w-2xl space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-sky-400">
+            <span className="text-xs font-bold uppercase tracking-widest text-lime-400">
               Contactez Nos Équipes
             </span>
             <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight">
@@ -59,42 +59,42 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-6">
               <h3 className="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-                <Building className="w-5 h-5 text-sky-600" />
+                <Building className="w-5 h-5 text-lime-600" />
                 <span>Nos Agences & Showrooms au Maroc</span>
               </h3>
 
               {/* Casablanca */}
               <div className="space-y-1.5">
-                <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5 text-sky-700">
-                  <MapPin className="w-4 h-4 text-sky-600" />
+                <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5 text-lime-700">
+                  <MapPin className="w-4 h-4 text-lime-600" />
                   <span>Siège Social & Dépôt Central Casablanca</span>
                 </h4>
                 <p className="text-xs text-slate-600 pl-5 leading-relaxed">
                   Boulevard Sidi Bernoussi, Quartier Industriel, Casablanca – Maroc
                 </p>
                 <p className="text-xs text-slate-500 pl-5">
-                  Tél : +212 (0) 522 35 06 66 | Mobile : +212 (0) 661 00 00 00
+                  Tél : +212 (0) 522 35 06 66 | Mobile / WhatsApp : {siteConfig.contact.phoneDisplay}
                 </p>
               </div>
 
               {/* Agadir */}
               <div className="space-y-1.5 pt-3 border-t border-slate-100">
-                <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5 text-sky-700">
-                  <MapPin className="w-4 h-4 text-sky-600" />
+                <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5 text-lime-700">
+                  <MapPin className="w-4 h-4 text-lime-600" />
                   <span>Agence Régionale Sud – Agadir</span>
                 </h4>
                 <p className="text-xs text-slate-600 pl-5 leading-relaxed">
                   Riad Salam, Agadir – Maroc
                 </p>
                 <p className="text-xs text-slate-500 pl-5">
-                  Tél : +212 (0) 528 29 25 91 | Mobile : +212 (0) 667 76 10 88
+                  Tél : +212 (0) 528 29 25 91 | Mobile : {siteConfig.contact.phoneDisplay}
                 </p>
               </div>
 
               {/* Tanger */}
               <div className="space-y-1.5 pt-3 border-t border-slate-100">
-                <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5 text-sky-700">
-                  <MapPin className="w-4 h-4 text-sky-600" />
+                <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5 text-lime-700">
+                  <MapPin className="w-4 h-4 text-lime-600" />
                   <span>Bureau de Liaison Nord – Tanger</span>
                 </h4>
                 <p className="text-xs text-slate-600 pl-5 leading-relaxed">
@@ -104,25 +104,25 @@ export default function ContactPage() {
 
               {/* Hours */}
               <div className="pt-3 border-t border-slate-100 flex items-center gap-2.5 text-xs text-slate-600">
-                <Clock className="w-4 h-4 text-sky-600 shrink-0" />
+                <Clock className="w-4 h-4 text-lime-600 shrink-0" />
                 <span>Du Lundi au Vendredi : 08h30 – 18h00 (Samedi : 09h00 – 13h00)</span>
               </div>
             </div>
 
             {/* Direct WhatsApp Callout */}
-            <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-6 space-y-3">
-              <div className="flex items-center gap-2 text-emerald-800 font-bold text-sm">
-                <MessageCircle className="w-5 h-5 text-emerald-600" />
+            <div className="bg-lime-50/70 border border-lime-200 rounded-3xl p-6 space-y-3">
+              <div className="flex items-center gap-2 text-lime-900 font-bold text-sm">
+                <MessageCircle className="w-5 h-5 text-lime-600" />
                 <span>Assistance Commerciale WhatsApp Direct</span>
               </div>
-              <p className="text-xs text-emerald-900 leading-relaxed">
+              <p className="text-xs text-lime-950 leading-relaxed">
                 Envoyez directement votre bon de commande ou demande d&apos;information pour un traitement en priorité.
               </p>
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Bonjour%20Robolab`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-colors"
+                className="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl bg-lime-600 hover:bg-lime-500 text-white font-bold text-xs shadow-md transition-colors"
               >
                 Ouvrir WhatsApp ({siteConfig.contact.whatsappDisplay})
               </a>
@@ -141,7 +141,7 @@ export default function ContactPage() {
 
               {submitted ? (
                 <div className="py-12 text-center space-y-3">
-                  <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-lime-100 text-lime-600 mx-auto flex items-center justify-center">
                     <CheckCircle2 className="w-10 h-10" />
                   </div>
                   <h4 className="text-lg font-bold text-slate-900">Message envoyé avec succès !</h4>
@@ -150,7 +150,7 @@ export default function ContactPage() {
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-4 px-6 py-2.5 bg-sky-600 text-white text-xs font-bold rounded-xl hover:bg-sky-500 transition-colors"
+                    className="mt-4 px-6 py-2.5 bg-slate-900 hover:bg-lime-600 text-white text-xs font-bold rounded-xl transition-colors"
                   >
                     Envoyer un autre message
                   </button>
@@ -168,7 +168,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Dr. Mohamed Benali"
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
 
@@ -182,7 +182,7 @@ export default function ContactPage() {
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="Laboratoire XYZ"
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -198,7 +198,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="contact@exemple.ma"
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
 
@@ -212,7 +212,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+212 6..."
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -228,7 +228,7 @@ export default function ContactPage() {
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         placeholder="Casablanca, Tanger, Agadir..."
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
 
@@ -239,13 +239,12 @@ export default function ContactPage() {
                       <select
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       >
                         <option value="Demande d'information générale">Information générale</option>
                         <option value="Demande de devis spécifique">Demande de devis spécifique</option>
                         <option value="Étalonnage et Métrologie">Étalonnage et Métrologie</option>
                         <option value="Service Après-Vente / Réclamation">Service Après-Vente (SAV)</option>
-                        <option value="Projet Laboratoire Clé en Main">Projet Clé en Main</option>
                       </select>
                     </div>
                   </div>
@@ -260,14 +259,14 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Précisez les références, quantités, délais requis..."
-                      className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                      className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                     ></textarea>
                   </div>
 
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
                     <button
                       type="submit"
-                      className="flex-1 py-3 px-6 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
+                      className="flex-1 py-3 px-6 bg-slate-900 hover:bg-lime-600 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
                     >
                       <Send className="w-4 h-4" />
                       <span>Envoyer le Message</span>
@@ -277,7 +276,7 @@ export default function ContactPage() {
                       href={getWhatsAppMessageUrl()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="py-3 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
+                      className="py-3 px-6 bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
                     >
                       <MessageCircle className="w-4 h-4" />
                       <span>Envoyer via WhatsApp</span>

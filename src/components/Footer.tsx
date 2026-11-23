@@ -113,27 +113,27 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  • Étalonnage & Métrologie Certifiée
+                <Link href="/services" className="hover:text-lime-400 transition-colors">
+                  • Étalonnage & Métrologie ISO 17025
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  • Aménagement Laboratoires Clés en Main
+                <Link href="/services" className="hover:text-lime-400 transition-colors">
+                  • Mise en Service & Installation
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
+                <Link href="/services" className="hover:text-lime-400 transition-colors">
                   • Maintenance & SAV sous 24/48h
                 </Link>
               </li>
               <li>
-                <Link href="/devis" className="hover:text-white transition-colors">
+                <Link href="/devis" className="hover:text-lime-400 transition-colors">
                   • Demande de Devis Gratuite
                 </Link>
               </li>
               <li>
-                <Link href="/a-propos" className="hover:text-white transition-colors">
+                <Link href="/a-propos" className="hover:text-lime-400 transition-colors">
                   • Notre Engagement Qualité
                 </Link>
               </li>
