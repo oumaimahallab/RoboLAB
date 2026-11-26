@@ -1,0 +1,50 @@
+[
+  {
+    "id": "CT-474354",
+    "name": "Oumaima OumaimaHallab Hallab",
+    "company": "Hallab",
+    "email": "hallab.oumaima@emsi-edu.ma",
+    "phone": "+212631775676",
+    "city": "Casablanca",
+    "subject": "Demande d'information générale",
+    "message": "Installation & Mise en Service\n",
+    "createdAt": "2026-11-24T11:58:26.720Z",
+    "recipientEmail": "commercial@robolab-tech.com"
+  },
+  {
+    "id": "CT-806547",
+    "name": "Oumaima OumaimaHallab Hallab",
+    "company": "Hallab",
+    "email": "hallab.oumaima@emsi-edu.ma",
+    "phone": "+212631775676",
+    "city": "Casablanca",
+    "subject": "Service Après-Vente / Réclamation",
+    "message": "Je veux profiter de votre SAV",
+    "createdAt": "2026-11-24T11:50:30.531Z",
+    "recipientEmail": "commercial@robolab-tech.com"
+  },
+  {
+    "id": "CT-471698",
+    "name": "Oumaima Hallab",
+    "company": "Hallab",
+    "email": "hallaboumaima@gmail.com",
+    "phone": "+212631775676",
+    "city": "Casablanca",
+    "subject": "Service Après-Vente / Réclamation",
+    "message": "Je veux profiter de votre SAV",
+    "createdAt": "2026-11-24T11:49:47.441Z",
+    "recipientEmail": "commercial@robolab-tech.com"
+  },
+  {
+    "id": "CT-272218",
+    "name": "Test Client",
+    "company": "Labo Test",
+    "email": "test@client.ma",
+    "phone": "0612345678",
+    "city": "Casablanca",
+    "subject": "Demande info",
+    "message": "Test message",
+    "createdAt": "2026-11-24T11:44:42.042Z",
+    "recipientEmail": "commercial@robolab-tech.com"
+  }
+]

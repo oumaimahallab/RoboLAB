@@ -113,28 +113,28 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="hover:text-lime-400 transition-colors">
+                <Link href="/services#etalonnage" className="hover:text-lime-400 transition-colors">
                   • Étalonnage & Métrologie ISO 17025
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-lime-400 transition-colors">
+                <Link href="/services#installation" className="hover:text-lime-400 transition-colors">
                   • Mise en Service & Installation
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-lime-400 transition-colors">
+                <Link href="/services#maintenance" className="hover:text-lime-400 transition-colors">
                   • Maintenance & SAV sous 24/48h
                 </Link>
               </li>
               <li>
-                <Link href="/devis" className="hover:text-lime-400 transition-colors">
-                  • Demande de Devis Gratuite
+                <Link href="/services#qualification" className="hover:text-lime-400 transition-colors">
+                  • Qualification QI / QO & Formation
                 </Link>
               </li>
               <li>
-                <Link href="/a-propos" className="hover:text-lime-400 transition-colors">
-                  • Notre Engagement Qualité
+                <Link href="/contact" className="hover:text-lime-400 transition-colors">
+                  • Demande d&apos;Intervention Directe
                 </Link>
               </li>
             </ul>
@@ -186,6 +186,9 @@ export default function Footer() {
             </Link>
             <Link href="/devis" className="hover:text-slate-300 transition-colors">
               Devis
+            </Link>
+            <Link href="/admin" className="hover:text-lime-400 transition-colors">
+              Espace Admin
             </Link>
           </div>
         </div>

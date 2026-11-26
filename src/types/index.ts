@@ -23,6 +23,7 @@ export interface Product {
   specifications: ProductSpecification[];
   features: string[];
   inStock: boolean;
+  price?: string;
   isPopular?: boolean;
   isNew?: boolean;
   applications: string[]; // e.g. "Agroalimentaire", "Pharmaceutique", "Recherche", "Enseignement", "Contrôle Qualité"

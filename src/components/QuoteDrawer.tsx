@@ -244,7 +244,7 @@ export default function QuoteDrawer() {
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="Ex: Dr. Ahmed Alaoui"
-                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:outline-none"
                     />
                     <User className="w-4 h-4 text-slate-400 absolute left-2.5 top-2.5" />
                   </div>
@@ -261,7 +261,7 @@ export default function QuoteDrawer() {
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       placeholder="Ex: Laboratoire Agro Mar, Clinique..."
-                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:outline-none"
                     />
                     <Building2 className="w-4 h-4 text-slate-400 absolute left-2.5 top-2.5" />
                   </div>
@@ -279,7 +279,7 @@ export default function QuoteDrawer() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+212 6..."
-                        className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                       <Phone className="w-4 h-4 text-slate-400 absolute left-2.5 top-2.5" />
                     </div>
@@ -296,7 +296,7 @@ export default function QuoteDrawer() {
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         placeholder="Casablanca, Agadir..."
-                        className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                       <MapPin className="w-4 h-4 text-slate-400 absolute left-2.5 top-2.5" />
                     </div>
@@ -314,7 +314,7 @@ export default function QuoteDrawer() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="contact@votre-entreprise.ma"
-                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                      className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:outline-none"
                     />
                     <Mail className="w-4 h-4 text-slate-400 absolute left-2.5 top-2.5" />
                   </div>
@@ -327,7 +327,7 @@ export default function QuoteDrawer() {
                   <select
                     value={formData.sector}
                     onChange={(e) => setFormData({ ...formData, sector: e.target.value })}
-                    className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                    className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-lime-500 focus:outline-none"
                   >
                     <option value="Agroalimentaire">Agroalimentaire & Pêche</option>
                     <option value="Pharmaceutique">Pharmaceutique & Cosmétique</option>
@@ -348,7 +348,7 @@ export default function QuoteDrawer() {
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                     placeholder="Certificat d'étalonnage requis, délai souhaité, etc."
-                    className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                    className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:outline-none"
                   ></textarea>
                 </div>
 
@@ -362,7 +362,7 @@ export default function QuoteDrawer() {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 py-2.5 text-xs font-bold text-white bg-sky-600 hover:bg-sky-500 rounded-xl shadow-md transition-colors flex items-center justify-center gap-1.5"
+                    className="flex-1 py-2.5 text-xs font-black text-slate-950 bg-lime-500 hover:bg-lime-400 rounded-xl shadow-md transition-colors flex items-center justify-center gap-1.5"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>Envoyer la Demande</span>
@@ -395,27 +395,15 @@ export default function QuoteDrawer() {
                     href={generateWhatsAppUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-2.5 px-4 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 transition-colors"
+                    className="w-full py-2.5 px-4 bg-lime-500 hover:bg-lime-400 text-slate-950 text-xs font-black rounded-xl flex items-center justify-center gap-2 transition-colors shadow-xs"
                   >
                     <MessageCircle className="w-4 h-4" />
                     <span>Confirmer sur WhatsApp</span>
                   </a>
 
-                  <a
-                    href={`mailto:${siteConfig.contact.recipientEmail}?subject=${encodeURIComponent(`Demande de Devis N° ${quoteReference} - ${formData.company}`)}&body=${encodeURIComponent(
-                      `Bonjour,\n\nVoici ma demande de devis N° ${quoteReference} :\nSociété : ${formData.company}\nContact : ${formData.fullName}\nTél : ${formData.phone}\nVille : ${formData.city}\n\nArticles demandés :\n` +
-                      items.map((it, idx) => `${idx + 1}. ${it.product.name} (Réf: ${it.product.reference}) - Qté: ${it.quantity}`).join("\n") +
-                      `\n\nNotes : ${formData.notes || "Néant"}`
-                    )}`}
-                    className="w-full py-2.5 px-4 border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-bold rounded-xl flex items-center justify-center gap-2 transition-colors"
-                  >
-                    <Mail className="w-4 h-4 text-sky-600" />
-                    <span>Envoyer un double par ma boîte mail</span>
-                  </a>
-
                   <button
                     onClick={handleReset}
-                    className="w-full py-2 text-xs font-medium text-slate-500 hover:text-slate-800"
+                    className="w-full py-2.5 text-xs font-semibold text-slate-600 hover:text-slate-900 border border-slate-200 rounded-xl"
                   >
                     Fermer et continuer ma visite
                   </button>

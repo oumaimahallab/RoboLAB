@@ -99,7 +99,7 @@ export default function DevisPage() {
         {/* Banner */}
         <div className="bg-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden mb-10">
           <div className="max-w-2xl space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-sky-400">
+            <span className="text-xs font-bold uppercase tracking-widest text-lime-400">
               Devis B2B Rapide & Gratuit
             </span>
             <h1 className="text-2xl md:text-4xl font-black">
@@ -113,11 +113,11 @@ export default function DevisPage() {
 
         {submitted ? (
           <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 text-center max-w-xl mx-auto space-y-4 shadow-xl">
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-lime-100 text-lime-600 mx-auto flex items-center justify-center">
               <CheckCircle2 className="w-10 h-10" />
             </div>
             <h2 className="text-2xl font-black text-slate-900">Demande de devis enregistrée !</h2>
-            <p className="text-xs font-mono bg-sky-50 text-sky-800 py-1.5 px-4 rounded-full font-bold inline-block">
+            <p className="text-xs font-mono bg-lime-50 text-lime-800 border border-lime-200 py-1.5 px-4 rounded-full font-bold inline-block">
               Référence Dossier : {quoteReference}
             </p>
             <p className="text-xs text-slate-600 leading-relaxed">
@@ -129,7 +129,7 @@ export default function DevisPage() {
                 href={generateWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 transition-colors shadow-md"
+                className="w-full py-3 px-6 bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-xs rounded-xl flex items-center justify-center gap-2 transition-colors shadow-md"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Confirmer et accélérer le traitement sur WhatsApp</span>
@@ -147,7 +147,7 @@ export default function DevisPage() {
                 <Link
                   href="/catalogue"
                   onClick={() => clearQuote()}
-                  className="text-xs text-sky-600 hover:underline font-bold"
+                  className="text-xs text-lime-700 hover:underline font-bold"
                 >
                   Retourner au catalogue produits
                 </Link>
@@ -161,7 +161,7 @@ export default function DevisPage() {
               <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                   <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                    <FileCheck className="w-4 h-4 text-sky-600" />
+                    <FileCheck className="w-4 h-4 text-lime-600" />
                     <span>Articles Sélectionnés ({items.length})</span>
                   </h3>
                   {items.length > 0 && (
@@ -181,7 +181,7 @@ export default function DevisPage() {
                     </p>
                     <Link
                       href="/catalogue"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 hover:underline pt-2"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-lime-700 hover:underline pt-2"
                     >
                       <span>Ajouter des équipements depuis le catalogue</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -247,12 +247,12 @@ export default function DevisPage() {
               </div>
 
               {/* Guarantees Box */}
-              <div className="bg-sky-50 rounded-2xl p-5 border border-sky-200 space-y-2 text-xs text-sky-900">
-                <div className="font-bold flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-sky-600" />
+              <div className="bg-lime-50/70 rounded-2xl p-5 border border-lime-200 space-y-2 text-xs text-lime-950">
+                <div className="font-bold flex items-center gap-2 text-lime-900">
+                  <CheckCircle2 className="w-4 h-4 text-lime-600" />
                   <span>Engagements ROBOLAB pour vos devis :</span>
                 </div>
-                <ul className="space-y-1.5 pl-6 list-disc text-[11px] text-sky-800">
+                <ul className="space-y-1.5 pl-6 list-disc text-[11px] text-lime-900">
                   <li>Validité de l&apos;offre de prix : 30 jours</li>
                   <li>Indication claire des délais de livraison et stocks</li>
                   <li>Fiches techniques constructeur et certificats fournis</li>
@@ -283,7 +283,7 @@ export default function DevisPage() {
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                         placeholder="Dr. Karim Tazi"
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
 
@@ -297,7 +297,7 @@ export default function DevisPage() {
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="Société / Usine / Clinique"
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -312,7 +312,7 @@ export default function DevisPage() {
                         value={formData.ice}
                         onChange={(e) => setFormData({ ...formData, ice: e.target.value })}
                         placeholder="001234567000089"
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
 
@@ -326,7 +326,7 @@ export default function DevisPage() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+212 6..."
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
 
@@ -340,7 +340,7 @@ export default function DevisPage() {
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         placeholder="Casablanca, Agadir..."
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -356,7 +356,7 @@ export default function DevisPage() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="achat@votre-entreprise.ma"
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
 
@@ -367,7 +367,7 @@ export default function DevisPage() {
                       <select
                         value={formData.sector}
                         onChange={(e) => setFormData({ ...formData, sector: e.target.value })}
-                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                        className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       >
                         <option value="Agroalimentaire">Industrie Agroalimentaire</option>
                         <option value="Pharmaceutique">Pharmacie & Cosmétique</option>
@@ -388,14 +388,14 @@ export default function DevisPage() {
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                       placeholder="Précisez toute référence manquante, besoin de certificat d'étalonnage, installation sur site..."
-                      className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                      className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                     ></textarea>
                   </div>
 
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
                     <button
                       type="submit"
-                      className="flex-1 py-3 px-6 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
+                      className="flex-1 py-3 px-6 bg-slate-900 hover:bg-lime-600 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
                     >
                       <Send className="w-4 h-4" />
                       <span>Valider et Recevoir mon Devis sous 24h</span>
@@ -405,7 +405,7 @@ export default function DevisPage() {
                       href={generateWhatsAppUrl()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="py-3 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
+                      className="py-3 px-6 bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
                     >
                       <MessageCircle className="w-4 h-4" />
                       <span>Transmettre par WhatsApp</span>

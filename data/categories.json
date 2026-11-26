@@ -1,0 +1,100 @@
+[
+  {
+    "id": "balances",
+    "name": "Balances & Pesage de Précision",
+    "slug": "balances",
+    "description": "Balances analytiques, de précision, dessiccateurs, industrielles et masses étalons certifiées.",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
+    "iconName": "Scale",
+    "itemCount": 42,
+    "subcategories": [
+      "Balances Analytiques (0.1 mg)",
+      "Balances de Précision (1 mg / 0.01 g)",
+      "Dessiccateurs d'humidité",
+      "Balances Industrielles & Plateformes",
+      "Masses Étalons & Poids de Contrôle (M1, F1, E2)"
+    ]
+  },
+  {
+    "id": "mesure",
+    "name": "Instruments & Appareils de Mesure",
+    "slug": "mesure",
+    "description": "Thermomètres, pH-mètres, conductimètres, réfractomètres, spectrophotomètres et luxmètres.",
+    "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80",
+    "iconName": "Gauge",
+    "itemCount": 58,
+    "subcategories": [
+      "Thermomètres & Enregistreurs de T°",
+      "pH-mètres & Électrodes",
+      "Conductimètres & EC-mètres",
+      "Réfractomètres numériques & optiques",
+      "Spectrophotomètres UV-VIS",
+      "Hygromètres & Manomètres"
+    ]
+  },
+  {
+    "id": "appareils",
+    "name": "Équipements & Appareils de Laboratoire",
+    "slug": "appareils",
+    "description": "Agitateurs, centrifugeuses, étuves de séchage, autoclaves, bains-marie et microscopes.",
+    "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80",
+    "iconName": "Cpu",
+    "itemCount": 36,
+    "subcategories": [
+      "Agitateurs Magnétiques & Vortex",
+      "Centrifugeuses de paillasse",
+      "Étuves & Fours de laboratoire",
+      "Autoclaves de stérilisation",
+      "Bains-marie & Thermostats",
+      "Microscopes optiques & digitaux"
+    ]
+  },
+  {
+    "id": "verrerie",
+    "name": "Verrerie & Consommables Scientifiques",
+    "slug": "verrerie",
+    "description": "Béchers, fioles jaugées, éprouvettes, flacons Duran, micropipettes et embouts stériles.",
+    "image": "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80",
+    "iconName": "FlaskConical",
+    "itemCount": 95,
+    "subcategories": [
+      "Béchers & Erlenmeyers Borosilicaté 3.3",
+      "Fioles jaugées Classe A",
+      "Éprouvettes & Pipettes graduées",
+      "Flacons Duran & Col Large",
+      "Micropipettes & Embouts",
+      "Boîtes de Pétri & Consommables Plastique"
+    ]
+  },
+  {
+    "id": "chimie",
+    "name": "Produits Chimiques & Réactifs",
+    "slug": "chimie",
+    "description": "Solvants de haute pureté, acides purs, réactifs d'analyse et milieux de culture microbiologiques.",
+    "image": "https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=800&q=80",
+    "iconName": "Atom",
+    "itemCount": 64,
+    "subcategories": [
+      "Solvants purs (Méthanol, Éthanol, Acétone HPLC)",
+      "Acides & Bases de laboratoire",
+      "Solutions étalons & tampons pH certifiés",
+      "Milieux de culture déshydratés & prêts à l'emploi",
+      "Colorants & Indicateurs colorimétriques"
+    ]
+  },
+  {
+    "id": "mobilier",
+    "name": "Mobilier Technique & Sécurité",
+    "slug": "mobilier",
+    "description": "Paillasses modulaires de laboratoire, hottes aspirantes, armoires de sécurité coupe-feu.",
+    "image": "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80",
+    "iconName": "ShieldCheck",
+    "itemCount": 22,
+    "subcategories": [
+      "Armoires de sécurité pour produits inflammables (EN 14470-1)",
+      "Hottes aspirantes & Sorbonnes à flux laminaire",
+      "Paillasses sèches & humides en grès ou résine",
+      "Douches de sécurité & Laveurs d'yeux"
+    ]
+  }
+]

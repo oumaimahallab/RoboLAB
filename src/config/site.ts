@@ -9,6 +9,7 @@ export const siteConfig = {
     // 📲 Numéro WhatsApp & Mobile :
     whatsapp: "212679706224",
     whatsappDisplay: "+212 6 79 70 62 24",
+    phoneDisplay: "+212 (0) 679 70 62 24",
     phoneCasablanca: "+212 (0) 522 35 06 66",
     phoneAgadir: "+212 (0) 528 29 25 91",
     mobile: "+212 (0) 679 70 62 24",

@@ -98,6 +98,16 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                 <p className="text-xs font-mono text-slate-500 mt-0.5">
                   Référence Catalogue : <span className="font-bold text-slate-800">{product.reference}</span>
                 </p>
+                {product.price && product.price !== "Sur devis" ? (
+                  <div className="mt-2 inline-flex items-center gap-1.5 px-3 py-1 bg-lime-50 text-lime-800 border border-lime-300 rounded-lg text-xs font-mono font-bold">
+                    <span>Prix indicatif :</span>
+                    <span className="text-sm font-black">{product.price}</span>
+                  </div>
+                ) : (
+                  <div className="mt-2 inline-block text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded">
+                    Tarif officiel sur devis
+                  </div>
+                )}
               </div>
 
               <p className="text-xs text-slate-600 leading-relaxed">

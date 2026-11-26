@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   MapPin,
   Phone,
@@ -9,7 +9,8 @@ import {
   Send,
   MessageCircle,
   Building,
-  CheckCircle2
+  CheckCircle2,
+  ExternalLink
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -23,11 +24,46 @@ export default function ContactPage() {
     subject: "Demande d'information générale",
     message: ""
   });
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [ticketId, setTicketId] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const sub = params.get("subject");
+      if (sub === "etalonnage") {
+        setFormData((prev) => ({ ...prev, subject: "Étalonnage et Métrologie" }));
+      } else if (sub === "installation") {
+        setFormData((prev) => ({ ...prev, subject: "Installation et Mise en Service" }));
+      } else if (sub === "sav") {
+        setFormData((prev) => ({ ...prev, subject: "Service Après-Vente / Réclamation" }));
+      } else if (sub === "qualification") {
+        setFormData((prev) => ({ ...prev, subject: "Formation et Qualification QI/QO" }));
+      }
+    }
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+      const data = await res.json();
+      if (data.id) {
+        setTicketId(data.id);
+      }
+    } catch (err) {
+      console.error("Erreur transmission formulaire contact :", err);
+    } finally {
+      setLoading(false);
+      setSubmitted(true);
+    }
   };
 
   const getWhatsAppMessageUrl = () => {
@@ -48,7 +84,7 @@ export default function ContactPage() {
               À Votre Service Partout au Maroc
             </h1>
             <p className="text-sm text-slate-300 leading-relaxed">
-              Une demande de devis, une vérification de stock ou un besoin d&apos;étalonnage ? Nos spécialistes sont disponibles par téléphone, e-mail ou WhatsApp.
+              Une demande de devis, une vérification de stock ou un besoin d&apos;étalonnage ? Nos spécialistes sont disponibles par téléphone, e-mail Outlook ou WhatsApp.
             </p>
           </div>
         </div>
@@ -109,22 +145,30 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Direct WhatsApp Callout */}
-            <div className="bg-lime-50/70 border border-lime-200 rounded-3xl p-6 space-y-3">
+            {/* Direct WhatsApp & Email Info Box */}
+            <div className="bg-lime-50/70 border border-lime-200 rounded-3xl p-6 space-y-4">
               <div className="flex items-center gap-2 text-lime-900 font-bold text-sm">
-                <MessageCircle className="w-5 h-5 text-lime-600" />
-                <span>Assistance Commerciale WhatsApp Direct</span>
+                <Mail className="w-5 h-5 text-lime-700" />
+                <span>Coordonnées Commerciales</span>
               </div>
-              <p className="text-xs text-lime-950 leading-relaxed">
-                Envoyez directement votre bon de commande ou demande d&apos;information pour un traitement en priorité.
-              </p>
+              <div className="space-y-2 text-xs text-slate-700">
+                <p>
+                  <span className="text-slate-500 block text-[11px]">E-mail officiel :</span>
+                  <strong className="font-mono text-slate-900 text-xs">{siteConfig.contact.recipientEmail}</strong>
+                </p>
+                <p>
+                  <span className="text-slate-500 block text-[11px]">Téléphone & WhatsApp :</span>
+                  <strong className="text-slate-900 text-xs">{siteConfig.contact.whatsappDisplay}</strong>
+                </p>
+              </div>
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Bonjour%20Robolab`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl bg-lime-600 hover:bg-lime-500 text-white font-bold text-xs shadow-md transition-colors"
+                className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-xs shadow-xs transition-colors"
               >
-                Ouvrir WhatsApp ({siteConfig.contact.whatsappDisplay})
+                <MessageCircle className="w-4 h-4" />
+                <span>Contacter sur WhatsApp ({siteConfig.contact.whatsappDisplay})</span>
               </a>
             </div>
           </div>
@@ -136,24 +180,42 @@ export default function ContactPage() {
                 Formulaire de Contact & Renseignements
               </h3>
               <p className="text-xs text-slate-500 mb-6">
-                Remplissez les champs ci-dessous. Un ingénieur vous répondra dans les plus brefs délais.
+                Remplissez les champs ci-dessous. Votre message sera envoyé directement à notre boîte commerciale <strong className="text-slate-800">{siteConfig.contact.recipientEmail}</strong>.
               </p>
 
               {submitted ? (
-                <div className="py-12 text-center space-y-3">
+                <div className="py-10 text-center space-y-4">
                   <div className="w-16 h-16 rounded-full bg-lime-100 text-lime-600 mx-auto flex items-center justify-center">
                     <CheckCircle2 className="w-10 h-10" />
                   </div>
-                  <h4 className="text-lg font-bold text-slate-900">Message envoyé avec succès !</h4>
-                  <p className="text-xs text-slate-600 max-w-sm mx-auto">
-                    Merci {formData.name}. Notre équipe technico-commerciale a bien reçu votre demande et vous recontactera sous 24h ouvrées.
+                  <h4 className="text-xl font-black text-slate-900">Message transmis avec succès !</h4>
+                  {ticketId && (
+                    <span className="inline-block px-3 py-1 bg-lime-50 text-lime-800 border border-lime-200 rounded-full font-mono font-bold text-xs">
+                      Ticket N° {ticketId}
+                    </span>
+                  )}
+                  <p className="text-xs text-slate-600 max-w-md mx-auto leading-relaxed">
+                    Merci {formData.name}. Votre demande a bien été transmise à notre équipe commerciale sur <strong className="text-slate-900 font-mono">{siteConfig.contact.recipientEmail}</strong>. Nous vous répondrons sous 24h ouvrées.
                   </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="mt-4 px-6 py-2.5 bg-slate-900 hover:bg-lime-600 text-white text-xs font-bold rounded-xl transition-colors"
-                  >
-                    Envoyer un autre message
-                  </button>
+
+                  <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a
+                      href={getWhatsAppMessageUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto px-6 py-2.5 bg-lime-500 hover:bg-lime-400 text-slate-950 text-xs font-black rounded-xl flex items-center justify-center gap-2 transition-colors shadow-xs"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>Accélérer sur WhatsApp</span>
+                    </a>
+
+                    <button
+                      onClick={() => setSubmitted(false)}
+                      className="w-full sm:w-auto px-5 py-2.5 border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-semibold rounded-xl transition-colors"
+                    >
+                      Envoyer un autre message
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -181,7 +243,7 @@ export default function ContactPage() {
                         required
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        placeholder="Laboratoire XYZ"
+                        placeholder="Laboratoire XYZ, Clinique, Usine..."
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:outline-none"
                       />
                     </div>
@@ -244,7 +306,9 @@ export default function ContactPage() {
                         <option value="Demande d'information générale">Information générale</option>
                         <option value="Demande de devis spécifique">Demande de devis spécifique</option>
                         <option value="Étalonnage et Métrologie">Étalonnage et Métrologie</option>
+                        <option value="Installation et Mise en Service">Installation et Mise en Service</option>
                         <option value="Service Après-Vente / Réclamation">Service Après-Vente (SAV)</option>
+                        <option value="Formation et Qualification QI/QO">Formation et Qualification QI/QO</option>
                       </select>
                     </div>
                   </div>
@@ -266,10 +330,11 @@ export default function ContactPage() {
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
                     <button
                       type="submit"
+                      disabled={loading}
                       className="flex-1 py-3 px-6 bg-slate-900 hover:bg-lime-600 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
                     >
                       <Send className="w-4 h-4" />
-                      <span>Envoyer le Message</span>
+                      <span>{loading ? "Envoi en cours..." : "Envoyer le Message"}</span>
                     </button>
 
                     <a
