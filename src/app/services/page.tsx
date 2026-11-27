@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ShieldCheck,
   Wrench,
@@ -121,45 +122,22 @@ export default function ServicesPage() {
     }
   ];
 
-  const steps = [
-    {
-      num: "01",
-      title: "Expression du Besoin",
-      desc: "Vous nous transmettez la liste de vos instruments, références et type de prestation souhaité via notre formulaire ou WhatsApp."
-    },
-    {
-      num: "02",
-      title: "Devis Chiffré sous 24h",
-      desc: "Nos ingénieurs établissent une offre technique détaillée précisant le calendrier, les normes appliquées et les coûts."
-    },
-    {
-      num: "03",
-      title: "Intervention sur Site",
-      desc: "Nos métrologues interviennent dans votre laboratoire avec leurs étalons certifiés pour réaliser les contrôles ou la maintenance."
-    },
-    {
-      num: "04",
-      title: "Certificats & Clôture",
-      desc: "Remise immédiate des fiches d'intervention et envoi des certificats d'étalonnage officiels avec traçabilité complète."
-    }
-  ];
-
   return (
-    <div className="bg-slate-50 min-h-screen py-10 space-y-16">
-      {/* 1. HERO HEADER - Clean, laboratory authority, no duplicate buttons */}
+    <div className="bg-[#EEF2F6] min-h-screen py-10 space-y-16">
+      {/* 1. HERO HEADER - Palette 1 Aluminium Satiné & Vert Sauge */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-slate-900 rounded-3xl p-8 md:p-14 text-white relative overflow-hidden">
+        <div className="bg-[#F8FAFC] rounded-3xl p-8 md:p-14 border border-slate-300/60 shadow-xs relative overflow-hidden">
           <div className="max-w-3xl space-y-5 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-500/10 text-lime-400 text-xs font-bold border border-lime-500/20">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E7EFE0] text-[#3F6212] text-xs font-semibold border border-[#C8DAB8]">
+              <Sparkles className="w-3.5 h-3.5 text-[#4D7C0F]" />
               <span>SUPPORT TECHNIQUE & MÉTROLOGIE INDUSTRIELLE</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 leading-tight">
               Services Techniques, Étalonnage & SAV de Laboratoire
             </h1>
 
-            <p className="text-sm md:text-base text-slate-300 leading-relaxed max-w-2xl">
+            <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-2xl">
               Au-delà de la distribution, ROBOLAB TECHNOLOGY assure la qualification, la maintenance préventive et l&apos;étalonnage certifié de vos instruments de mesure partout au Maroc avec des délais d&apos;intervention stricts sous 24/48h.
             </p>
 
@@ -167,35 +145,35 @@ export default function ServicesPage() {
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <Link
                 href="/contact?subject=etalonnage"
-                className="px-6 py-3.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-xs shadow-md transition-colors inline-flex items-center gap-2"
+                className="px-6 py-3.5 rounded-full bg-[#4D7C0F] hover:bg-[#3F6212] text-white font-semibold text-xs shadow-xs transition-colors inline-flex items-center gap-2"
               >
                 <CalendarCheck2 className="w-4 h-4" />
                 <span>Demander une Intervention Technique</span>
               </Link>
-              <div className="flex items-center gap-2 text-xs text-slate-300">
-                <Clock className="w-4 h-4 text-lime-400 shrink-0" />
+              <div className="flex items-center gap-2 text-xs text-slate-600 font-medium">
+                <Clock className="w-4 h-4 text-[#4D7C0F] shrink-0" />
                 <span>Intervention sous 24/48h ouvrées partout au Maroc</span>
               </div>
             </div>
           </div>
 
           {/* 4 Trust Metrics Bar */}
-          <div className="mt-10 pt-8 border-t border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs">
+          <div className="mt-10 pt-8 border-t border-slate-100 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs">
             <div>
-              <strong className="text-white text-lg font-black block">24 / 48h</strong>
-              <span className="text-slate-400 text-[11px]">Délai d&apos;intervention sur site</span>
+              <strong className="text-slate-900 text-lg font-black block">24 / 48h</strong>
+              <span className="text-slate-500 text-[11px]">Délai d&apos;intervention sur site</span>
             </div>
             <div>
-              <strong className="text-lime-400 text-lg font-black block">ISO 17025</strong>
-              <span className="text-slate-400 text-[11px]">Étalons certifiés & raccordés</span>
+              <strong className="text-lime-700 text-lg font-black block">ISO 17025</strong>
+              <span className="text-slate-500 text-[11px]">Étalons certifiés & raccordés</span>
             </div>
             <div>
-              <strong className="text-white text-lg font-black block">100% Origine</strong>
-              <span className="text-slate-400 text-[11px]">Pièces constructeur certifiées</span>
+              <strong className="text-slate-900 text-lg font-black block">100% Origine</strong>
+              <span className="text-slate-500 text-[11px]">Pièces constructeur certifiées</span>
             </div>
             <div>
-              <strong className="text-lime-400 text-lg font-black block">Maroc Entier</strong>
-              <span className="text-slate-400 text-[11px]">Casablanca • Agadir • Tanger</span>
+              <strong className="text-lime-700 text-lg font-black block">Maroc Entier</strong>
+              <span className="text-slate-500 text-[11px]">Casablanca • Agadir • Tanger</span>
             </div>
           </div>
         </div>
@@ -313,36 +291,27 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* 4. WORKFLOW: 4 STEP PROCESS */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="text-center max-w-xl mx-auto space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-lime-700">
-            Méthodologie Éprouvée
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
-            Comment se Déroule une Intervention ROBOLAB ?
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((st, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-3 relative"
-            >
-              <div className="text-2xl font-black text-lime-600 font-mono">{st.num}</div>
-              <h4 className="text-sm font-bold text-slate-900">{st.title}</h4>
-              <p className="text-xs text-slate-500 leading-relaxed">{st.desc}</p>
-            </div>
-          ))}
+      {/* 4. WORKFLOW: 4 STEP PROCESS (Illustrated Infographic matching User Request) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-3xl p-4 sm:p-8 md:p-10 border border-slate-200/80 shadow-xs flex flex-col items-center">
+          <div className="relative w-full aspect-[1024/321] max-w-5xl rounded-2xl overflow-hidden">
+            <Image
+              src="/images/methodologie-intervention-robolab.jpg"
+              alt="Méthodologie Éprouvée - Comment se Déroule une Intervention ROBOLAB"
+              fill
+              unoptimized
+              priority
+              className="object-contain"
+            />
+          </div>
         </div>
       </section>
 
-      {/* 5. QUALITY & ACCREDITATIONS (Soft Reassurance without clashing dark banner) */}
+      {/* 5. QUALITY & ACCREDITATIONS (Soft Reassurance) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-lime-50/70 rounded-3xl p-8 md:p-10 border border-lime-200 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-white rounded-3xl p-8 md:p-10 border border-slate-200/80 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 max-w-xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-lime-800">
+            <span className="text-xs font-bold uppercase tracking-wider text-lime-700">
               Garantie & Conformité Réglementaire
             </span>
             <h3 className="text-lg md:text-xl font-black text-slate-900">
@@ -356,7 +325,7 @@ export default function ServicesPage() {
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             <Link
               href="/contact?subject=etalonnage"
-              className="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow-xs transition-colors"
+              className="px-6 py-3 rounded-full bg-lime-600 hover:bg-lime-700 text-white font-semibold text-xs shadow-xs transition-colors"
             >
               Planifier une Intervention
             </Link>
@@ -364,9 +333,9 @@ export default function ServicesPage() {
               href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Bonjour%20Robolab,%20je%20souhaite%20un%20devis%20de%20service%20ou%20etalonnage`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-xs shadow-xs transition-colors inline-flex items-center gap-2"
+              className="px-6 py-3 rounded-full bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200 font-semibold text-xs transition-colors inline-flex items-center gap-2"
             >
-              <PhoneCall className="w-4 h-4" />
+              <PhoneCall className="w-4 h-4 text-lime-600" />
               <span>Assistance SAV : {siteConfig.contact.phoneDisplay}</span>
             </a>
           </div>

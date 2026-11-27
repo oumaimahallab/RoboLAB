@@ -2,12 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { QuoteProvider } from "@/context/QuoteContext";
 import { AdminProvider } from "@/context/AdminContext";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import QuoteDrawer from "@/components/QuoteDrawer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import AdminTopBar from "@/components/AdminTopBar";
-import AdminVisualModals from "@/components/AdminVisualModals";
+import { CmsProvider } from "@/context/CmsContext";
+import PublicSiteWrapper from "@/components/PublicSiteWrapper";
 
 export const metadata: Metadata = {
   title: "ROBOLAB Maroc | Équipements de Laboratoire, Métrologie & Solutions Scientifiques",
@@ -32,17 +28,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className="h-full antialiased scroll-smooth">
-      <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans">
+      <body className="min-h-full flex flex-col bg-[#EEF2F6] text-slate-800 font-sans">
         <AdminProvider>
-          <QuoteProvider>
-            <AdminTopBar />
-            <Header />
-            <main className="flex-1">{children}</main>
-            <QuoteDrawer />
-            <WhatsAppButton />
-            <Footer />
-            <AdminVisualModals />
-          </QuoteProvider>
+          <CmsProvider>
+            <QuoteProvider>
+              <PublicSiteWrapper>{children}</PublicSiteWrapper>
+            </QuoteProvider>
+          </CmsProvider>
         </AdminProvider>
       </body>
     </html>

@@ -1,9 +1,17 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { isAuthenticatedAdmin } from "@/lib/authServer";
 
 export async function POST(req: Request) {
   try {
+    if (!(await isAuthenticatedAdmin())) {
+      return NextResponse.json(
+        { success: false, error: "Non autorisé. Authentification admin requise." },
+        { status: 401 }
+      );
+    }
+
     const formData = await req.formData();
     const file = formData.get("file") as File | null;
 

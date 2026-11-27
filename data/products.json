@@ -1,5 +1,71 @@
 [
   {
+    "id": "prod_1795789380431",
+    "name": "ttt",
+    "slug": "ttt",
+    "brand": "tst",
+    "category": "verrerie",
+    "categoryLabel": "Verrerie & Consommables Scientifiques",
+    "subcategory": "Général",
+    "reference": "estst",
+    "image": "/uploads/gemini_generated_image_x22uw9x22uw9x22u-1795789374017.jfif",
+    "shortDescription": "",
+    "description": "",
+    "price": "Sur devis",
+    "inStock": true,
+    "isPopular": false,
+    "isNew": true,
+    "specifications": [
+      {
+        "name": "Portée max",
+        "value": ""
+      },
+      {
+        "name": "Précision",
+        "value": ""
+      }
+    ],
+    "features": [
+      "Conforme ISO / BPF"
+    ],
+    "applications": [
+      "Contrôle Qualité"
+    ]
+  },
+  {
+    "id": "prod_1795789230209",
+    "name": "ex12",
+    "slug": "ex12",
+    "brand": "Tst",
+    "category": "balances",
+    "categoryLabel": "Balances & Pesage de Précision",
+    "subcategory": "Général",
+    "reference": "test12",
+    "image": "/uploads/roblab-1795789157286.jpg",
+    "shortDescription": "",
+    "description": "",
+    "price": "Sur devis",
+    "inStock": true,
+    "isPopular": false,
+    "isNew": true,
+    "specifications": [
+      {
+        "name": "Portée max",
+        "value": ""
+      },
+      {
+        "name": "Précision",
+        "value": ""
+      }
+    ],
+    "features": [
+      "Conforme ISO / BPF"
+    ],
+    "applications": [
+      "Contrôle Qualité"
+    ]
+  },
+  {
     "id": "prod_1795618529635",
     "name": "OHAUS",
     "slug": "ohaus",
@@ -264,58 +330,6 @@
     ]
   },
   {
-    "id": "mes-03",
-    "name": "Spectrophotomètre UV-Visible Double Faisceau 190-1100 nm",
-    "slug": "spectrophotometre-uv-visible-double-faisceau",
-    "brand": "Robolab Optics",
-    "category": "mesure",
-    "categoryLabel": "Mesure & Analyse",
-    "subcategory": "Spectrophotomètres UV-VIS",
-    "reference": "RB-SPEC-UV800",
-    "image": "https://images.unsplash.com/photo-1581093806997-124204d9fa9d?auto=format&fit=crop&w=800&q=80",
-    "shortDescription": "Spectrophotomètre d'analyse spectrale complet pour dosages quantitatifs, cinétiques et balayage spectral.",
-    "description": "Système de photométrie de haute performance pour laboratoires de recherche, universités et contrôle qualité industriel. Doté d'une bande passante de 1,8 nm, d'un grand écran couleur tactile autonome et d'un passeur automatique de 4 cuves.",
-    "specifications": [
-      {
-        "name": "Plage de longueurs d'onde",
-        "value": "190 à 1100 nm"
-      },
-      {
-        "name": "Bande passante spectrale",
-        "value": "1.8 nm"
-      },
-      {
-        "name": "Précision longueur d'onde",
-        "value": "± 0.3 nm"
-      },
-      {
-        "name": "Gamme photométrique",
-        "value": "-0.3 à 3.0 Abs / 0 à 200 %T"
-      },
-      {
-        "name": "Sources lumineuses",
-        "value": "Lampe Deutérium (UV) & Lampe Tungstène-Halogène (Visible)"
-      },
-      {
-        "name": "Modes",
-        "value": "Absorbance, Transmittance, Concentration, Balayage, Cinétique"
-      }
-    ],
-    "features": [
-      "Passeur automatique 4 cuves standard 10 mm inclus",
-      "Logiciel PC Windows fourni pour traitement avancé des spectres",
-      "Stockage direct sur clé USB des courbes et résultats",
-      "Contrôle automatique des longueurs d'onde à la mise sous tension"
-    ],
-    "inStock": true,
-    "applications": [
-      "Biochimie",
-      "Pharmacie",
-      "Analyse des Eaux",
-      "Enseignement Supérieur"
-    ]
-  },
-  {
     "id": "app-01",
     "name": "Agitateur Magnétique Chauffant Numérique avec Sonde PT1000",
     "slug": "agitateur-magnetique-chauffant-numerique-pt1000",
@@ -366,55 +380,6 @@
       "Préparation Échantillons",
       "Biochimie",
       "Enseignement"
-    ]
-  },
-  {
-    "id": "app-02",
-    "name": "Centrifugeuse Universelle de Paillasse 4000 RPM (Capacité 8 x 15ml)",
-    "slug": "centrifugeuse-universelle-paillasse-4000-rpm",
-    "brand": "Robolab SpinPro",
-    "category": "appareils",
-    "categoryLabel": "Équipements & Appareils",
-    "subcategory": "Centrifugeuses de paillasse",
-    "reference": "RB-CENT-4000",
-    "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80",
-    "shortDescription": "Centrifugeuse clinique et industrielle silencieuse avec moteur sans charbon (brushless) et verrouillage de sécurité.",
-    "description": "Appareil compact dédié aux séparations d'échantillons sanguins, urinaires, suspensions cellulaires et précipités chimiques. Fonctionnement ultra silencieux (< 56 dB), programmation simple en vitesse (RPM) ou force centrifuge relative (RCF).",
-    "specifications": [
-      {
-        "name": "Vitesse maximale",
-        "value": "300 à 4000 tr/min (pas de 10 tr/min)"
-      },
-      {
-        "name": "Accélération max. (RCF)",
-        "value": "2200 x g"
-      },
-      {
-        "name": "Capacité du rotor",
-        "value": "8 tubes de 15 ml ou 12 tubes de 10ml / 7ml / 5ml"
-      },
-      {
-        "name": "Minuterie",
-        "value": "1 à 99 minutes ou fonctionnement continu (Hold)"
-      },
-      {
-        "name": "Moteur",
-        "value": "Induction sans balai sans entretien (Brushless)"
-      }
-    ],
-    "features": [
-      "Verrouillage électronique sécurisé du couvercle pendant la rotation",
-      "Détection automatique de balourd avec arrêt immédiat",
-      "Bouton 'Short Spin' pour des impulsions rapides de centrifugation",
-      "Livrée complète avec rotor angulaire et adaptateurs pour tubes"
-    ],
-    "inStock": true,
-    "isPopular": true,
-    "applications": [
-      "Analyses Médicales",
-      "Vétérinaire",
-      "Biologie Moléculaire",
-      "Recherche"
     ]
   },
   {
@@ -642,73 +607,6 @@
     ]
   },
   {
-    "id": "ver-03",
-    "name": "Micropipette Ergonomique Monocanal à Volume Variable Autoclavable",
-    "slug": "micropipette-ergonomique-volume-variable",
-    "brand": "Robolab PipetPro",
-    "category": "verrerie",
-    "categoryLabel": "Verrerie & Consommables",
-    "subcategory": "Micropipettes & Embouts",
-    "reference": "RB-PIP-VAR",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
-    "shortDescription": "Pipette automatique de précision ultra légère avec bouton éjecteur d'embouts et piston amorti.",
-    "description": "Conçue pour minimiser la fatigue musculaire (RSI) lors des pipetages répétitifs en routine clinique ou moléculaire. Entièrement autoclavable à 121°C sans démontage préalable pour éviter toute contamination croisée.",
-    "specifications": [
-      {
-        "name": "Gamme de volumes",
-        "value": "Disponible de 0.5-10 µL à 1000-5000 µL"
-      },
-      {
-        "name": "Précision d'exactitude",
-        "value": "± 0.6 % (au volume maximal)"
-      },
-      {
-        "name": "Répétabilité",
-        "value": "≤ 0.2 %"
-      },
-      {
-        "name": "Stérilisation",
-        "value": "Autoclavable intégrale à 121°C (20 min)"
-      },
-      {
-        "name": "Compatibilité embouts",
-        "value": "Universelle (standard Eppendorf, Gilson, etc.)"
-      }
-    ],
-    "features": [
-      "Compteur de volume à 4 chiffres haute visibilité",
-      "Effort d'éjection des embouts réduit de 50%",
-      "Résistance chimique supérieure aux solvants et UV",
-      "Fournie avec outil de recalibrage rapide et certificat ISO 8655"
-    ],
-    "inStock": true,
-    "isPopular": true,
-    "applications": [
-      "Biologie Moléculaire",
-      "Sérologie",
-      "Analyses Médicales",
-      "Génétique"
-    ],
-    "variants": [
-      {
-        "label": "Plage 0.5 - 10 µL",
-        "sku": "RB-PIP-10"
-      },
-      {
-        "label": "Plage 10 - 100 µL",
-        "sku": "RB-PIP-100"
-      },
-      {
-        "label": "Plage 100 - 1000 µL",
-        "sku": "RB-PIP-1000"
-      },
-      {
-        "label": "Kit 4 Pipettes (10, 100, 1000 µL + Support)",
-        "sku": "RB-PIP-KIT4"
-      }
-    ]
-  },
-  {
     "id": "chm-01",
     "name": "Méthanol Pur pour Analyse HPLC / Gradient Grade 2.5 Litres",
     "slug": "methanol-pur-analyse-hplc-gradient-grade",
@@ -759,49 +657,6 @@
       "Pharma",
       "Contrôle Résidus Pesticides",
       "Recherche"
-    ]
-  },
-  {
-    "id": "chm-02",
-    "name": "Kit de Solutions Tampons pH Certifiées (pH 4.01 / 7.00 / 10.01)",
-    "slug": "kit-solutions-tampons-ph-certifiees",
-    "brand": "Robolab Calib",
-    "category": "chimie",
-    "categoryLabel": "Produits Chimiques & Réactifs",
-    "subcategory": "Solutions étalons & tampons pH certifiés",
-    "reference": "RB-BUF-KIT3",
-    "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80",
-    "shortDescription": "Pack de 3 flacons étalons colorés avec doseur intégré pour calibrage rapide sans risque de contamination.",
-    "description": "Solutions tampons traçables NIST avec code couleur universel (Rouge pour pH 4.01, Jaune pour pH 7.00, Bleu pour pH 10.01). Chaque flacon intègre une chambre doseuse permettant d'étalonner l'électrode sans transvaser dans un récipient intermédiaire.",
-    "specifications": [
-      {
-        "name": "Valeurs de consigne (25°C)",
-        "value": "pH 4.01 ± 0.01 / pH 7.00 ± 0.01 / pH 10.01 ± 0.02"
-      },
-      {
-        "name": "Traçabilité",
-        "value": "Étalons primaires NIST (National Institute of Standards and Tech)"
-      },
-      {
-        "name": "Volume par flacon",
-        "value": "500 ml avec compartiment doseur intégré"
-      },
-      {
-        "name": "Tableau de variation T°",
-        "value": "Imprimé directement sur l'étiquette de chaque flacon"
-      }
-    ],
-    "features": [
-      "Système de dosage anti-gaspillage évitant la contamination du flacon principal",
-      "Codes couleurs empêchant toute erreur d'inversion lors de la manipulation",
-      "Certificat d'analyse de lot traçable inclus dans chaque boîte"
-    ],
-    "inStock": true,
-    "applications": [
-      "Tous Laboratoires",
-      "Industrie Laitière",
-      "Pétrochimie",
-      "Stations d'Épuration"
     ]
   },
   {
@@ -947,55 +802,6 @@
       "Minoterie & Céréales",
       "Nutrition Animale",
       "Eaux Usées"
-    ]
-  },
-  {
-    "id": "app-06",
-    "name": "Viscosimètre Rotatif Numérique Haute Précision (Type Brookfield)",
-    "slug": "viscosimetre-rotatif-numerique-haute-precision",
-    "brand": "Robolab RheoTech",
-    "category": "mesure",
-    "categoryLabel": "Mesure & Analyse",
-    "subcategory": "Viscosimètres & Rhéomètres",
-    "reference": "RB-VISCO-DIGI",
-    "image": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=800&q=80",
-    "shortDescription": "Mesure directe et continue de la viscosité dynamique en cP / mPa.s avec sonde de température intégrée.",
-    "description": "Appareil de référence pour le contrôle qualité des peintures, encres, cosmétiques (crèmes, gels), produits alimentaires (huiles, mayonnaises, yaourts) et résines. Livré avec jeu complet de 4 mobiles (spindles) et certificat d'étalonnage traçable.",
-    "specifications": [
-      {
-        "name": "Plage de mesure",
-        "value": "10 à 2 000 000 mPa.s (cP)"
-      },
-      {
-        "name": "Précision de mesure",
-        "value": "± 1.0 % de la pleine échelle"
-      },
-      {
-        "name": "Répétabilité",
-        "value": "± 0.2 %"
-      },
-      {
-        "name": "Vitesses de rotation",
-        "value": "0.3 à 100 tr/min (18 vitesses)"
-      },
-      {
-        "name": "Sonde de température",
-        "value": "PT100 intégrée de -20°C à 120°C"
-      }
-    ],
-    "features": [
-      "Calcul automatique de la viscosité, vitesse de cisaillement et contrainte",
-      "Statif motorisé à crémaillère avec niveau à bulle digital",
-      "Écran LCD rétroéclairé avec interface multilingue",
-      "Fourni avec 4 mobiles en acier inox 316L et étrier de protection"
-    ],
-    "inStock": true,
-    "isPopular": true,
-    "applications": [
-      "Cosmétique",
-      "Peintures & Vernis",
-      "Agroalimentaire",
-      "Pharmacie"
     ]
   },
   {

@@ -5,7 +5,7 @@ import { MessageCircle, X } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export default function WhatsAppButton() {
-  const [tooltipOpen, setTooltipOpen] = useState(true);
+  const [tooltipOpen, setTooltipOpen] = useState(false);
 
   return (
     <div className="fixed bottom-6 right-6 z-40 flex items-end gap-3">
@@ -28,7 +28,7 @@ export default function WhatsAppButton() {
         href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Bonjour%20ROBOLAB,%20je%20souhaite%20un%20renseignement%20sur%20vos%20équipements%20de%20laboratoire`}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg shadow-emerald-500/30 hover:scale-105 transition-all"
+        className="w-13 h-13 rounded-full bg-[#4D7C0F] hover:bg-[#3F6212] text-white flex items-center justify-center shadow-md hover:scale-105 transition-all"
         title="Discuter sur WhatsApp"
       >
         <MessageCircle className="w-7 h-7" />

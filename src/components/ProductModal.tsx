@@ -95,9 +95,18 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                   <span>{product.categoryLabel}</span>
                 </div>
                 <h2 className="text-xl font-black text-slate-900 mt-1">{product.name}</h2>
-                <p className="text-xs font-mono text-slate-500 mt-0.5">
-                  Référence Catalogue : <span className="font-bold text-slate-800">{product.reference}</span>
-                </p>
+                <div className="flex items-center justify-between flex-wrap gap-2 mt-1">
+                  <p className="text-xs font-mono text-slate-500">
+                    Référence Catalogue : <span className="font-bold text-slate-800">{product.reference}</span>
+                  </p>
+                  <a
+                    href={`/produit/${product.id}`}
+                    className="text-xs font-bold text-lime-700 hover:text-lime-800 hover:underline flex items-center gap-1"
+                  >
+                    <span>Fiche complète</span>
+                    <span>→</span>
+                  </a>
+                </div>
                 {product.price && product.price !== "Sur devis" ? (
                   <div className="mt-2 inline-flex items-center gap-1.5 px-3 py-1 bg-lime-50 text-lime-800 border border-lime-300 rounded-lg text-xs font-mono font-bold">
                     <span>Prix indicatif :</span>

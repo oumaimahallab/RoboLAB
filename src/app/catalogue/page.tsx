@@ -92,10 +92,10 @@ function CatalogueContent() {
     selectedCategory !== "all" || searchQuery !== "" || selectedBrand !== "all";
 
   return (
-    <div className="bg-slate-50 min-h-screen py-8 md:py-12">
+    <div className="bg-[#EEF2F6] min-h-screen py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Simple Page Header */}
-        <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-xs mb-8">
+        <div className="bg-[#F8FAFC] rounded-3xl p-6 md:p-8 border border-slate-300/60 shadow-xs mb-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-lime-700">
@@ -162,10 +162,10 @@ function CatalogueContent() {
           <div className="flex items-center gap-2 overflow-x-auto pt-6 border-t border-slate-100 mt-6 no-scrollbar">
             <button
               onClick={() => setSelectedCategory("all")}
-              className={`px-4 py-2 rounded-xl text-xs font-bold shrink-0 transition-colors ${
+              className={`px-4 py-2 rounded-full text-xs font-semibold shrink-0 transition-colors cursor-pointer ${
                 selectedCategory === "all"
-                  ? "bg-slate-900 text-white"
-                  : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                  ? "bg-lime-600 text-white shadow-xs"
+                  : "bg-slate-100 text-slate-700 hover:bg-slate-200/70"
               }`}
             >
               Tous les produits ({productsList.length})
@@ -174,10 +174,10 @@ function CatalogueContent() {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold shrink-0 transition-colors ${
+                className={`px-4 py-2 rounded-full text-xs font-semibold shrink-0 transition-colors cursor-pointer ${
                   selectedCategory === cat.id
-                    ? "bg-lime-500 text-slate-950 shadow-xs"
-                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                    ? "bg-lime-600 text-white shadow-xs"
+                    : "bg-slate-100 text-slate-700 hover:bg-slate-200/70"
                 }`}
               >
                 {cat.name.split("&")[0]}
@@ -238,22 +238,22 @@ function CatalogueContent() {
               </select>
             </div>
 
-            {/* Direct WhatsApp Box */}
-            <div className="bg-slate-900 text-white rounded-2xl p-5 border border-slate-800 space-y-3">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-lime-400">
+            {/* Direct WhatsApp Box - Soft & Professional */}
+            <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs space-y-3">
+              <span className="inline-block px-2.5 py-0.5 rounded-full bg-lime-50 text-lime-800 border border-lime-200/70 text-[10px] font-semibold uppercase tracking-wider">
                 Besoin d&apos;aide ?
               </span>
-              <h4 className="text-sm font-bold leading-snug">
+              <h4 className="text-sm font-bold text-slate-900 leading-snug">
                 Vous cherchez une référence précise ?
               </h4>
-              <p className="text-xs text-slate-300">
+              <p className="text-xs text-slate-600 leading-relaxed">
                 Envoyez-nous la référence ou la photo de votre matériel, nous vous répondons immédiatement.
               </p>
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Bonjour%20Robolab,%20je%20cherche%20une%20reference%20specifique`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full py-2.5 bg-lime-500 hover:bg-lime-400 text-slate-950 text-xs font-black rounded-xl transition-colors"
+                className="flex items-center justify-center gap-2 w-full py-2.5 bg-lime-600 hover:bg-lime-700 text-white text-xs font-semibold rounded-xl transition-colors shadow-xs"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp : {siteConfig.contact.whatsappDisplay}</span>

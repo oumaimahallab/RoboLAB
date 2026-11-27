@@ -47,7 +47,7 @@ export default function ProductCard({ product, onOpenDetails }: ProductCardProps
   return (
     <div
       onClick={() => onOpenDetails && onOpenDetails(product)}
-      className="group bg-white rounded-2xl border border-slate-200 hover:border-lime-500 hover:shadow-lg transition-all duration-200 flex flex-col cursor-pointer overflow-hidden relative"
+      className="group bg-[#F8FAFC] hover:bg-white rounded-2xl border border-slate-300/60 hover:border-[#4D7C0F]/60 hover:shadow-md transition-all duration-200 flex flex-col cursor-pointer overflow-hidden relative"
     >
       {/* Admin In-Place CRUD Bar */}
       {isAdmin && editMode && (
@@ -179,7 +179,7 @@ export default function ProductCard({ product, onOpenDetails }: ProductCardProps
             onClick={(e) => e.stopPropagation()}
             target="_blank"
             rel="noopener noreferrer"
-            className="py-2 px-3.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-xs transition-colors flex items-center gap-1.5 shadow-xs"
+            className="py-2 px-3.5 rounded-xl bg-[#4D7C0F] hover:bg-[#3F6212] text-white font-semibold text-xs transition-colors flex items-center gap-1.5 shadow-2xs"
           >
             <MessageCircle className="w-3.5 h-3.5" />
             <span>Demander le Prix</span>

@@ -72,19 +72,19 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen py-12 space-y-16">
+    <div className="bg-[#EEF2F6] min-h-screen py-12 space-y-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Page Header */}
-        <div className="bg-slate-900 rounded-3xl p-8 md:p-14 text-white relative overflow-hidden mb-10">
+        {/* Page Header - Palette 1 Aluminium Satiné & Vert Sauge */}
+        <div className="bg-[#F8FAFC] rounded-3xl p-8 md:p-12 border border-slate-300/60 shadow-xs relative overflow-hidden mb-10">
           <div className="max-w-2xl space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-lime-400">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E7EFE0] border border-[#C8DAB8] text-xs font-semibold text-[#3F6212]">
               Contactez Nos Équipes
             </span>
-            <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-4xl font-black tracking-tight text-slate-900 leading-tight">
               À Votre Service Partout au Maroc
             </h1>
-            <p className="text-sm text-slate-300 leading-relaxed">
-              Une demande de devis, une vérification de stock ou un besoin d&apos;étalonnage ? Nos spécialistes sont disponibles par téléphone, e-mail Outlook ou WhatsApp.
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Une demande de devis, une vérification de stock ou un besoin d&apos;étalonnage ? Nos spécialistes sont disponibles par téléphone, e-mail ou WhatsApp.
             </p>
           </div>
         </div>
@@ -146,26 +146,26 @@ export default function ContactPage() {
             </div>
 
             {/* Direct WhatsApp & Email Info Box */}
-            <div className="bg-lime-50/70 border border-lime-200 rounded-3xl p-6 space-y-4">
-              <div className="flex items-center gap-2 text-lime-900 font-bold text-sm">
-                <Mail className="w-5 h-5 text-lime-700" />
+            <div className="bg-white border border-slate-200/80 shadow-xs rounded-3xl p-6 space-y-4">
+              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                <Mail className="w-5 h-5 text-lime-600" />
                 <span>Coordonnées Commerciales</span>
               </div>
-              <div className="space-y-2 text-xs text-slate-700">
+              <div className="space-y-2 text-xs text-slate-600">
                 <p>
-                  <span className="text-slate-500 block text-[11px]">E-mail officiel :</span>
-                  <strong className="font-mono text-slate-900 text-xs">{siteConfig.contact.recipientEmail}</strong>
+                  <span className="text-slate-400 block text-[11px]">E-mail officiel :</span>
+                  <strong className="font-mono text-slate-800 text-xs">{siteConfig.contact.recipientEmail}</strong>
                 </p>
                 <p>
-                  <span className="text-slate-500 block text-[11px]">Téléphone & WhatsApp :</span>
-                  <strong className="text-slate-900 text-xs">{siteConfig.contact.whatsappDisplay}</strong>
+                  <span className="text-slate-400 block text-[11px]">Téléphone & WhatsApp :</span>
+                  <strong className="text-slate-800 text-xs">{siteConfig.contact.whatsappDisplay}</strong>
                 </p>
               </div>
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Bonjour%20Robolab`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-xs shadow-xs transition-colors"
+                className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-lime-600 hover:bg-lime-700 text-white font-semibold text-xs shadow-xs transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Contacter sur WhatsApp ({siteConfig.contact.whatsappDisplay})</span>
@@ -331,7 +331,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="flex-1 py-3 px-6 bg-slate-900 hover:bg-lime-600 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
+                      className="flex-1 py-3 px-6 bg-lime-600 hover:bg-lime-700 text-white font-semibold text-xs rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
                     >
                       <Send className="w-4 h-4" />
                       <span>{loading ? "Envoi en cours..." : "Envoyer le Message"}</span>
@@ -341,9 +341,9 @@ export default function ContactPage() {
                       href={getWhatsAppMessageUrl()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="py-3 px-6 bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
+                      className="py-3 px-6 bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200 font-semibold text-xs rounded-xl transition-colors flex items-center justify-center gap-2"
                     >
-                      <MessageCircle className="w-4 h-4" />
+                      <MessageCircle className="w-4 h-4 text-lime-600" />
                       <span>Envoyer via WhatsApp</span>
                     </a>
                   </div>

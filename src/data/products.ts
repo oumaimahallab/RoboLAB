@@ -787,6 +787,7 @@ export const PARTNER_BRANDS = [
   { name: "Interscience", logo: "INTERSCIENCE", country: "France" },
   { name: "Buchi", logo: "BÜCHI", country: "Suisse" },
   { name: "Mettler Toledo", logo: "METTLER TOLEDO", country: "Suisse" },
+  { name: "Sartorius", logo: "SARTORIUS", country: "Allemagne" },
   { name: "Horiba", logo: "HORIBA", country: "Japon" }
 ];
 
